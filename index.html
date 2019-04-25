@@ -151,7 +151,7 @@ d3.csv("data.csv", function(d, i, columns) {
   g.append("g")
       .attr("class", "axis")
       .attr("transform", "translate(790,450)") 						
-      .call(d3.axisLeft(width));
+      .call(d3.axisLeft(width).tickFormat( function(d) {return "$" + d;} ));
 
   g.append("text")
         .attr("x", 790)
